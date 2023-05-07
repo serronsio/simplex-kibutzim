@@ -2,24 +2,24 @@ import numpy as np
 from scipy.optimize import minimize
 
 # Solicitar o tamanho da área irrigável de cada kibutz
-area_irrigavel_k1 = float(input("Digite o tamanho da área irrigável do kibutz 1: "))
-area_irrigavel_k2 = float(input("Digite o tamanho da área irrigável do kibutz 2: "))
-area_irrigavel_k3 = float(input("Digite o tamanho da área irrigável do kibutz 3: "))
+area_irrigavel_k1 = float(input("Digite o tamanho da área irrigável do kibutz 1 (em acres pés): "))
+area_irrigavel_k2 = float(input("Digite o tamanho da área irrigável do kibutz 2 (em acres pés): "))
+area_irrigavel_k3 = float(input("Digite o tamanho da área irrigável do kibutz 3 (em acres pés): "))
 
 #Solucitar a quantidade máxima de área que pode ser dedicada a cada plantação
-max_beterraba = float(input("Digite a quantidade máxima de área que pode ser dedicada à beterraba: "))
-max_algodao = float(input("Digite a quantidade máxima de área que pode ser dedicada ao algodão: "))
-max_sorgo = float(input("Digite a quantidade máxima de área que pode ser dedicada ao sorgo: "))
+max_beterraba = float(input("Digite a quantidade máxima de área que pode ser dedicada à beterraba (em acres pés): "))
+max_algodao = float(input("Digite a quantidade máxima de área que pode ser dedicada ao algodão (em acres pés): "))
+max_sorgo = float(input("Digite a quantidade máxima de área que pode ser dedicada ao sorgo (em acres pés): "))
 
 #Solicitar a quantidade de água alocada para a irrigação de cada kibutz
-agua_k1 = float(input("Digite a quantidade de água alocada para a irrigação do kibutz 1: "))
-agua_k2 = float(input("Digite a quantidade de água alocada para a irrigação do kibutz 2: "))
-agua_k3 = float(input("Digite a quantidade de água alocada para a irrigação do kibutz 3: "))
+agua_k1 = float(input("Digite a quantidade de água alocada para a irrigação do kibutz 1 (em acres pés): "))
+agua_k2 = float(input("Digite a quantidade de água alocada para a irrigação do kibutz 2 (em acres pés): "))
+agua_k3 = float(input("Digite a quantidade de água alocada para a irrigação do kibutz 3 (em acres pés): "))
 
 #Solicitar os retornos líquidos esperados para cada plantação
-retorno_beterraba = float(input("Digite o retorno líquido esperado para a beterraba: "))
-retorno_algodao = float(input("Digite o retorno líquido esperado para o algodão: "))
-retorno_sorgo = float(input("Digite o retorno líquido esperado para o sorgo: "))
+retorno_beterraba = float(input("Digite valor do retorno líquido esperado para a beterraba: "))
+retorno_algodao = float(input("Digite o valor do retorno líquido esperado para o algodão: "))
+retorno_sorgo = float(input("Digite o valor do retorno líquido esperado para o sorgo: "))
 
 #Definindo a função objetivo
 def objetivo(x):
@@ -70,4 +70,4 @@ retorno_total = -1 * solucao.fun
 
 print("\nQuantidades de acres a serem dedicados a cada plantação nos kibutzim:")
 print(quantidades_acres)
-print("\nRetorno líquido total:", retorno_total)
+print("\nRetorno líquido total, em milhares de dólares americanos:", retorno_total)
